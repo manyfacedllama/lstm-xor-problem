@@ -1,0 +1,9 @@
+version: '3'
+services:
+  tf:
+    image: tensorflow/tensorflow:latest-jupyter
+    # mount host system volume to save updates from container
+    volumes:
+      - ./lstm_xor:/tf/notebooks:Z
+    ports:
+      - '8888:8888'
